@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{223FD900-7730-4400-A1D0-6CE16A0BC681}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>StMarthaManagementSystem.My.MyApplication</StartupObject>
+    <RootNamespace>StMarthaManagementSystem</RootNamespace>
+    <AssemblyName>StMarthaManagementSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>StMarthaManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>StMarthaManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.3.5, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.5\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net48\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net48\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddData\Test2\CheckBoxTest.Designer.vb">
+      <DependentUpon>CheckBoxTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\Test2\CheckBoxTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddData\ClientForm.Designer.vb">
+      <DependentUpon>ClientForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\ClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractFrame\AdminInformation.Designer.vb">
+      <DependentUpon>AdminInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractFrame\AdminInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractFrame\ContractNewForm.Designer.vb">
+      <DependentUpon>ContractNewForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractFrame\ContractNewForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractFrame\ContractPaymentNew.Designer.vb">
+      <DependentUpon>ContractPaymentNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractFrame\ContractPaymentNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractFrame\NewContractForm.Designer.vb">
+      <DependentUpon>NewContractForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractFrame\NewContractForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractFrame\NewContractPayment.Designer.vb">
+      <DependentUpon>NewContractPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractFrame\NewContractPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractFrame\NewContractRecord.Designer.vb">
+      <DependentUpon>NewContractRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractFrame\NewContractRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContractFrame\UpdateNewContractRecord.Designer.vb">
+      <DependentUpon>UpdateNewContractRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContractFrame\UpdateNewContractRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\PrintContractForm.Designer.vb">
+      <DependentUpon>PrintContractForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\PrintContractForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\ContractInformation.Designer.vb">
+      <DependentUpon>ContractInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\ContractInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\ContractPaymentForm.Designer.vb">
+      <DependentUpon>ContractPaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\ContractPaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\Packages.Designer.vb">
+      <DependentUpon>Packages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\Packages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\UpdateContractInformation.Designer.vb">
+      <DependentUpon>UpdateContractInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\UpdateContractInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FramePlan\Plan2ContractForm.Designer.vb">
+      <DependentUpon>Plan2ContractForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FramePlan\Plan2ContractForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddData\PlanForm.Designer.vb">
+      <DependentUpon>PlanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\PlanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddData\PlanPaymentForm.Designer.vb">
+      <DependentUpon>PlanPaymentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\PlanPaymentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddData\Update\UpdateContractPayment.Designer.vb">
+      <DependentUpon>UpdateContractPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\Update\UpdateContractPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddData\Update\UpdatedClientForm.Designer.vb">
+      <DependentUpon>UpdatedClientForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\Update\UpdatedClientForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\UpdatedContractForm.Designer.vb">
+      <DependentUpon>UpdatedContractForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\UpdatedContractForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\UpdatePackages.Designer.vb">
+      <DependentUpon>UpdatePackages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\UpdatePackages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddData\Update\UpdatePlanForm.Designer.vb">
+      <DependentUpon>UpdatePlanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\Update\UpdatePlanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddData\Update\UpdatePlanPayment.Designer.vb">
+      <DependentUpon>UpdatePlanPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddData\Update\UpdatePlanPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBConnection.vb" />
+    <Compile Include="Frames\PlanFrame.Designer.vb">
+      <DependentUpon>PlanFrame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\PlanFrame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FramePlan\PlanRecords.Designer.vb">
+      <DependentUpon>PlanRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FramePlan\PlanRecords.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FramePlan\AddPlanPayment.Designer.vb">
+      <DependentUpon>AddPlanPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FramePlan\AddPlanPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FramePlan\AddPlanForm.Designer.vb">
+      <DependentUpon>AddPlanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FramePlan\AddPlanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\DashboardFrame.Designer.vb">
+      <DependentUpon>DashboardFrame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\DashboardFrame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\ManageDocFrame.Designer.vb">
+      <DependentUpon>ManageDocFrame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\ManageDocFrame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\RecordFrame.Designer.vb">
+      <DependentUpon>RecordFrame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\RecordFrame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frames\SalesReportFrame.Designer.vb">
+      <DependentUpon>SalesReportFrame.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Frames\SalesReportFrame.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\ForgotPass.Designer.vb">
+      <DependentUpon>ForgotPass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm\ForgotPass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PlanFrame\NewPaymentPlan.Designer.vb">
+      <DependentUpon>NewPaymentPlan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlanFrame\NewPaymentPlan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanFrame\NewPlanForm.Designer.vb">
+      <DependentUpon>NewPlanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlanFrame\NewPlanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanFrame\NewPlanRecord.Designer.vb">
+      <DependentUpon>NewPlanRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlanFrame\NewPlanRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanFrame\UpdateNewPlanForm.Designer.vb">
+      <DependentUpon>UpdateNewPlanForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PlanFrame\UpdateNewPlanForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\ClientRecord.Designer.vb">
+      <DependentUpon>ClientRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Record\ClientRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\ContractPaymentRecord.Designer.vb">
+      <DependentUpon>ContractPaymentRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Record\ContractPaymentRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrameContract\ContractRecord.Designer.vb">
+      <DependentUpon>ContractRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrameContract\ContractRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\PlanPaymentRecord.Designer.vb">
+      <DependentUpon>PlanPaymentRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Record\PlanPaymentRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record\PlanRecord.Designer.vb">
+      <DependentUpon>PlanRecord.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Record\PlanRecord.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales Record.Designer.vb">
+      <DependentUpon>Sales Record.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales Record.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TESTDATE.Designer.vb">
+      <DependentUpon>TESTDATE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TESTDATE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testpanel\tesframe3.Designer.vb">
+      <DependentUpon>tesframe3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="testpanel\tesframe3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testpanel\testframe.Designer.vb">
+      <DependentUpon>testframe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="testpanel\testframe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testpanel\testframe1.Designer.vb">
+      <DependentUpon>testframe1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="testpanel\testframe1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testpanel\testframe2.Designer.vb">
+      <DependentUpon>testframe2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="testpanel\testframe2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Test\Add.Designer.vb">
+      <DependentUpon>Add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Test\Add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zTesting\Testing.Designer.vb">
+      <DependentUpon>Testing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="zTesting\Testing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContractFrame\AdminInformation.resx">
+      <DependentUpon>AdminInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractFrame\ContractNewForm.resx">
+      <DependentUpon>ContractNewForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractFrame\ContractPaymentNew.resx">
+      <DependentUpon>ContractPaymentNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractFrame\NewContractForm.resx">
+      <DependentUpon>NewContractForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractFrame\NewContractPayment.resx">
+      <DependentUpon>NewContractPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractFrame\NewContractRecord.resx">
+      <DependentUpon>NewContractRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContractFrame\UpdateNewContractRecord.resx">
+      <DependentUpon>UpdateNewContractRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\PrintContractForm.resx">
+      <DependentUpon>PrintContractForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\UpdateContractInformation.resx">
+      <DependentUpon>UpdateContractInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FramePlan\Plan2ContractForm.resx">
+      <DependentUpon>Plan2ContractForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\Test2\CheckBoxTest.resx">
+      <DependentUpon>CheckBoxTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\ClientForm.resx">
+      <DependentUpon>ClientForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\ContractInformation.resx">
+      <DependentUpon>ContractInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\ContractPaymentForm.resx">
+      <DependentUpon>ContractPaymentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\Packages.resx">
+      <DependentUpon>Packages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\PlanForm.resx">
+      <DependentUpon>PlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\PlanPaymentForm.resx">
+      <DependentUpon>PlanPaymentForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\Update\UpdateContractPayment.resx">
+      <DependentUpon>UpdateContractPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\Update\UpdatedClientForm.resx">
+      <DependentUpon>UpdatedClientForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\UpdatedContractForm.resx">
+      <DependentUpon>UpdatedContractForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\UpdatePackages.resx">
+      <DependentUpon>UpdatePackages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\Update\UpdatePlanForm.resx">
+      <DependentUpon>UpdatePlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddData\Update\UpdatePlanPayment.resx">
+      <DependentUpon>UpdatePlanPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FramePlan\AddPlanForm.resx">
+      <DependentUpon>AddPlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FramePlan\AddPlanPayment.resx">
+      <DependentUpon>AddPlanPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\PlanFrame.resx">
+      <DependentUpon>PlanFrame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FramePlan\PlanRecords.resx">
+      <DependentUpon>PlanRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\DashboardFrame.resx">
+      <DependentUpon>DashboardFrame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\ManageDocFrame.resx">
+      <DependentUpon>ManageDocFrame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\RecordFrame.resx">
+      <DependentUpon>RecordFrame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frames\SalesReportFrame.resx">
+      <DependentUpon>SalesReportFrame.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\ForgotPass.resx">
+      <DependentUpon>ForgotPass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanFrame\NewPaymentPlan.resx">
+      <DependentUpon>NewPaymentPlan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanFrame\NewPlanForm.resx">
+      <DependentUpon>NewPlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanFrame\NewPlanRecord.resx">
+      <DependentUpon>NewPlanRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanFrame\UpdateNewPlanForm.resx">
+      <DependentUpon>UpdateNewPlanForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\ClientRecord.resx">
+      <DependentUpon>ClientRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\ContractPaymentRecord.resx">
+      <DependentUpon>ContractPaymentRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrameContract\ContractRecord.resx">
+      <DependentUpon>ContractRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\PlanPaymentRecord.resx">
+      <DependentUpon>PlanPaymentRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record\PlanRecord.resx">
+      <DependentUpon>PlanRecord.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales Record.resx">
+      <DependentUpon>Sales Record.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TESTDATE.resx">
+      <DependentUpon>TESTDATE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testpanel\tesframe3.resx">
+      <DependentUpon>tesframe3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testpanel\testframe.resx">
+      <DependentUpon>testframe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testpanel\testframe1.resx">
+      <DependentUpon>testframe1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testpanel\testframe2.resx">
+      <DependentUpon>testframe2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Test\Add.resx">
+      <DependentUpon>Add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zTesting\Testing.resx">
+      <DependentUpon>Testing.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
